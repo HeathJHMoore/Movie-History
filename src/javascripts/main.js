@@ -3,6 +3,7 @@ import apiKeys from './helpers/data/apiKeys.json';
 import auth from './components/Auth/auth';
 import login from './helpers/data/authData';
 import logout from './components/Auth/signOut';
+import movies from './components/Movies/movies';
 
 import 'bootstrap';
 import '../styles/main.scss';
@@ -13,6 +14,7 @@ const init = () => {
   login.checkLoginStatus();
   auth.authStringBuilder();
   logout.logoutButton();
+  movies.movieBuilder();
 };
 
 init();

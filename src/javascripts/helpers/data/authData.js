@@ -3,7 +3,7 @@ import 'firebase/auth';
 
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('movies');
-const birfdayNavbar = document.getElementById('navbar-button-birfday');
+const birfdayNavbar = document.getElementById('navbar-button-movies');
 const authNavbar = document.getElementById('navbar-button-auth');
 const logoutNavbar = document.getElementById('navbar-button-logout');
 
