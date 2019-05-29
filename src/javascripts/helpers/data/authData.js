@@ -4,6 +4,7 @@ import 'firebase/auth';
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('movies');
 const birfdayNavbar = document.getElementById('navbar-button-movies');
+const addMovieNavbar = document.getElementById('navbar-button-addMovies');
 const authNavbar = document.getElementById('navbar-button-auth');
 const logoutNavbar = document.getElementById('navbar-button-logout');
 
@@ -14,6 +15,7 @@ const checkLoginStatus = () => {
       birfdayDiv.classList.remove('hide');
       birfdayNavbar.classList.remove('hide');
       authNavbar.classList.add('hide');
+      addMovieNavbar.classList.remove('hide');
       logoutNavbar.classList.remove('hide');
     } else {
       console.error('nope');
@@ -22,6 +24,7 @@ const checkLoginStatus = () => {
       birfdayNavbar.classList.add('hide');
       authNavbar.classList.remove('hide');
       logoutNavbar.classList.add('hide');
+      addMovieNavbar.classList.remove('hide');
     }
   });
 };
