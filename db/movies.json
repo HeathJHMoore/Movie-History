@@ -1,0 +1,17 @@
+{
+  "movie1": {
+    "title": "Superbad",
+    "mpaaRating": "rating4",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Superbad_Poster.png/220px-Superbad_Poster.png"
+  },
+  "movie2": {
+    "title": "Forrest Gump",
+    "mpaaRating": "rating3",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg"
+  },
+  "movie3": {
+    "title": "About Time",
+    "mpaaRating": "rating4",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/en/7/7c/About_Time_%282013_film%29_Poster.jpg"
+  }
+}
