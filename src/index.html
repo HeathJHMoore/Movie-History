@@ -38,13 +38,29 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h4 class="modal-title" id="exampleModalLabel">Add a new movie!</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <input type="text">
+          <div class='form-group text-center'>
+            <label for="newMovieTitle">Movie Title</label>
+            <input class="form-control" id="newMovieTitle" type="text">
+          </div>
+          <div class="form-group text-center">
+              <label for="exampleFormControlSelect1">MPAA Rating</label>
+              <select id="newMovieMPAARating" class="form-control" id="exampleFormControlSelect1">
+                <option>G</option>
+                <option>PG</option>
+                <option>PG-13</option>
+                <option>R</option>
+              </select>
+          </div>
+          <div class='form-group text-center'>
+              <label for="newMovieImageURL">Image URL</label>
+              <input class="form-control" id="newMovieTitle" type="text">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
