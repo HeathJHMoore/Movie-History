@@ -4,6 +4,7 @@ import auth from './components/Auth/auth';
 import login from './helpers/data/authData';
 import logout from './components/Auth/signOut';
 import movies from './components/Movies/movies';
+import addMovie from './components/Movies/createNewMovie';
 
 import 'bootstrap';
 import '../styles/main.scss';
@@ -15,6 +16,7 @@ const init = () => {
   auth.authStringBuilder();
   logout.logoutButton();
   movies.movieBuilder();
+  addMovie.createMovieEventListener();
 };
 
 init();

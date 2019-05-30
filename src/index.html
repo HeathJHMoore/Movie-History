@@ -32,7 +32,7 @@
     </nav>
   </div>
   <div id="auth"></div>
-  <div id="movies" class="hide container d-flex justify-content-between flex-wrap mt-2"></div>
+  <div id="movies" class="hide container col-12 d-flex justify-content-around flex-wrap mt-2"></div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -59,12 +59,12 @@
           </div>
           <div class='form-group text-center'>
               <label for="newMovieImageURL">Image URL</label>
-              <input class="form-control" id="newMovieTitle" type="text">
+              <input class="form-control" id="newMovieImageURL" type="text">
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button id="addMovieButton" type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
