@@ -6,6 +6,7 @@ const birfdayDiv = document.getElementById('movies');
 const birfdayNavbar = document.getElementById('navbar-button-movies');
 const addMovieNavbar = document.getElementById('navbar-button-addMovies');
 const authNavbar = document.getElementById('navbar-button-auth');
+const myWatchlist = document.getElementById('navbar-button-watchlist');
 const logoutNavbar = document.getElementById('navbar-button-logout');
 
 const checkLoginStatus = () => {
@@ -16,6 +17,7 @@ const checkLoginStatus = () => {
       birfdayNavbar.classList.remove('hide');
       authNavbar.classList.add('hide');
       addMovieNavbar.classList.remove('hide');
+      myWatchlist.classList.remove('hide');
       logoutNavbar.classList.remove('hide');
     } else {
       console.error('nope');
@@ -23,6 +25,7 @@ const checkLoginStatus = () => {
       birfdayDiv.classList.add('hide');
       birfdayNavbar.classList.add('hide');
       authNavbar.classList.remove('hide');
+      myWatchlist.classList.add('hide');
       logoutNavbar.classList.add('hide');
       addMovieNavbar.classList.remove('hide');
     }

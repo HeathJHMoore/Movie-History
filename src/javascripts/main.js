@@ -5,6 +5,8 @@ import login from './helpers/data/authData';
 import logout from './components/Auth/signOut';
 import movies from './components/Movies/movies';
 import addMovie from './components/Movies/createNewMovie';
+import watchlist from './components/myWatchlist/myWatchlist';
+import createWatchList from './components/myWatchlist/addToWatchlist';
 
 import 'bootstrap';
 import '../styles/main.scss';
@@ -17,6 +19,9 @@ const init = () => {
   logout.logoutButton();
   movies.movieBuilder();
   addMovie.createMovieEventListener();
+  watchlist.watchlistEvent();
+  movies.allMoviesEvent();
+  createWatchList.createWatchlistEventListener();
 };
 
 init();

@@ -1,7 +1,6 @@
 import getMovies from './getMovies';
 import util from '../../helpers/util';
 
-
 const movieBuilder = () => {
   getMovies.getMovies()
     .then((moviesArray) => {
@@ -12,7 +11,7 @@ const movieBuilder = () => {
         domString += `<h2>${movie.title}</h2>`;
         domString += `<img src="${movie.imageURL}" height="300px">`;
         domString += '<div>';
-        domString += '<button class="btn btn-primary w-100" style="border-radius: 0px;">Add to Watchlist</button>';
+        domString += '<button class="btn btn-primary w-100 watchlistButton" style="border-radius: 0px;">Add to Watchlist</button>';
         domString += '<button class="btn btn-secondary w-100" style="border-radius: 0px;">Rate this Movie</button>';
         domString += '</div>';
         domString += '</div>';
@@ -22,4 +21,8 @@ const movieBuilder = () => {
     .catch();
 };
 
-export default { movieBuilder };
+const allMoviesEvent = () => {
+  document.getElementById('navbar-button-movies').addEventListener('click', movieBuilder);
+};
+
+export default { movieBuilder, allMoviesEvent };
