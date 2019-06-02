@@ -17,7 +17,7 @@ const init = () => {
   login.checkLoginStatus();
   auth.authStringBuilder();
   logout.logoutButton();
-  movies.movieBuilder();
+  // movies.movieBuilder();
   addMovie.createMovieEventListener();
   watchlist.watchlistEvent();
   movies.allMoviesEvent();

@@ -1,6 +1,8 @@
 import fb from 'firebase/app';
 import 'firebase/auth';
 
+import movies from '../../components/Movies/movies';
+
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('movies');
 const birfdayNavbar = document.getElementById('navbar-button-movies');
@@ -19,6 +21,7 @@ const checkLoginStatus = () => {
       addMovieNavbar.classList.remove('hide');
       myWatchlist.classList.remove('hide');
       logoutNavbar.classList.remove('hide');
+      movies.movieBuilder();
     } else {
       console.error('nope');
       authDiv.classList.remove('hide');

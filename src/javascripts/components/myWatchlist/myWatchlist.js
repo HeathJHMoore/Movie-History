@@ -22,9 +22,7 @@ const watchlistMovieBuilder = (arrayOfMovies) => {
 const myWatchlistBuilder = () => {
   watchlist.getWatchlist(firebase.auth().currentUser.uid)
     .then((userWatchList) => {
-      console.error(userWatchList);
       const movieList = userWatchList.map(movie => movie.movieId);
-      console.error(movieList);
       movies.getMovies()
         .then((allMovies) => {
           const watchlistMovies = allMovies.filter(allMovie => movieList.indexOf(allMovie.id) !== -1);
@@ -32,7 +30,7 @@ const myWatchlistBuilder = () => {
         })
         .catch();
     })
-    .catch((console.error('its messed up')));
+    .catch(err => console.error(err));
 };
 
 const watchlistEvent = () => {

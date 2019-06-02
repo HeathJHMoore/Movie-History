@@ -7,7 +7,7 @@ const movieBuilder = () => {
       console.error('this is the moview Array', moviesArray);
       let domString = '';
       moviesArray.forEach((movie) => {
-        domString += '<div class="card movieCards p-0 mb-3 col-12 col-sm-6 col-lg-4 text-center" style="border: solid 1px black">';
+        domString += `<div ${movie.uid === undefined ? `id=${movie.id}` : `id=${movie.uid}`} class="card movieCards p-0 mb-3 col-12 col-sm-6 col-lg-4 text-center" style="border: solid 1px black">`;
         domString += `<h2>${movie.title}</h2>`;
         domString += `<img src="${movie.imageURL}" height="300px">`;
         domString += '<div>';
