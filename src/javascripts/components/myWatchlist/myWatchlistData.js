@@ -13,6 +13,7 @@ const getWatchlist = uid => new Promise((resolve, reject) => {
         watchlistResults[watchlistID].id = watchlistID;
         watchlist.push(watchlistResults[watchlistID]);
       });
+      console.error('look here PLEASE', watchlist);
       resolve(watchlist);
     })
     .catch(err => reject(err));

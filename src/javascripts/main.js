@@ -22,6 +22,7 @@ const init = () => {
   watchlist.watchlistEvent();
   movies.allMoviesEvent();
   createWatchList.createWatchlistEventListener();
+  watchlist.removeWatchMovieEvent();
 };
 
 init();

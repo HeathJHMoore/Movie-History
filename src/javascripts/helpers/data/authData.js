@@ -30,7 +30,7 @@ const checkLoginStatus = () => {
       authNavbar.classList.remove('hide');
       myWatchlist.classList.add('hide');
       logoutNavbar.classList.add('hide');
-      addMovieNavbar.classList.remove('hide');
+      addMovieNavbar.classList.add('hide');
     }
   });
 };
