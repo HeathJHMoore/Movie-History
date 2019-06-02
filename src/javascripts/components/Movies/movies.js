@@ -8,7 +8,8 @@ const movieBuilder = () => {
       let domString = '';
       moviesArray.forEach((movie) => {
         domString += `<div ${movie.uid === undefined ? `id=${movie.id}` : `id=${movie.uid}`} class="card movieCards p-0 mb-3 col-12 col-sm-6 col-lg-4 text-center" style="border: solid 1px black">`;
-        domString += `<h2>${movie.title}</h2>`;
+        domString += `<h2 id="${movie.id}">${movie.title}</h2>`;
+        domString += `<h5 class="${movie.mpaaRating}">Rating: ${movie.mpaaRating}</h5>`;
         domString += `<img src="${movie.imageURL}" height="300px">`;
         domString += '<div>';
         domString += '<button class="btn btn-primary w-100 watchlistButton" style="border-radius: 0px;">Add to Watchlist</button>';
