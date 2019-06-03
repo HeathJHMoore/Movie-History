@@ -40,12 +40,13 @@ const getMovies = () => new Promise((resolve, reject) => {
             if (watchlistMovies.find(userMovie => userMovie.movieId === movie.id)) {
               const currentMovie = watchlistMovies.find(userMovie => userMovie.movieId === movie.id);
               const updatedMovie = movie;
-              updatedMovie.uid = currentMovie.uid;
+              updatedMovie.uid = currentMovie.id;
               finalMovies.push(updatedMovie);
             } else {
               finalMovies.push(movie);
             }
           });
+          console.error('look at this USER MOVIES', finalMovies);
           resolve(finalMovies);
           // console.error('this is watchlist', watchlistMovies);
           // console.error('this is movies', movies);

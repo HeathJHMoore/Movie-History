@@ -1,4 +1,5 @@
 import newMovies from './createNewMovieData';
+import movies from './movies';
 
 const createNewMovies = () => {
   const newMovie = {
@@ -12,6 +13,7 @@ const createNewMovies = () => {
       document.getElementById('newMovieTitle').value = '';
       document.getElementById('newMovieMPAARating').value = '';
       document.getElementById('newMovieImageURL').value = '';
+      movies.movieBuilder();
     })
     .catch(err => console.error(err, 'no new movie for you'));
 };

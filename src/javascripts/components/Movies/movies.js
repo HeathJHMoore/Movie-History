@@ -21,11 +21,23 @@ import util from '../../helpers/util';
 //     })
 //     .catch();
 // };
+let userMoviesArray = [];
 
+const setMovies = () => {
+  const exportedArray = [...userMoviesArray];
+  return exportedArray;
+};
 
 const movieBuilder = () => {
   getMovies.getMovies()
     .then((moviesArray) => {
+      userMoviesArray = [];
+      moviesArray.forEach((mov) => {
+        if (mov.uid !== undefined) {
+          userMoviesArray.push(mov.uid);
+        }
+      });
+      console.error('PLEASE LOOK AT THIS NOW', userMoviesArray);
       console.error('this is the moview Array', moviesArray);
       let domString = '';
       moviesArray.forEach((movie) => {
@@ -48,4 +60,4 @@ const allMoviesEvent = () => {
   document.getElementById('navbar-button-movies').addEventListener('click', movieBuilder);
 };
 
-export default { movieBuilder, allMoviesEvent };
+export default { movieBuilder, allMoviesEvent, setMovies };

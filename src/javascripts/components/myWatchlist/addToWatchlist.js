@@ -3,7 +3,7 @@ import 'firebase/auth';
 
 import $ from 'jquery';
 
-
+import movies from '../Movies/movies';
 import addToWatchlist from './addToWatchlistData';
 
 
@@ -15,7 +15,8 @@ const addWatchlistMovie = (e) => {
   // const selectedMovieUrl = $(button).parent().parent().find('img')[0].src;
   const selectedMovieId = e.target.parentNode.parentNode.id;
   // console.error(selectedMovie);
-  if (selectedMovieId === firebase.auth().currentUser.uid) {
+  // if (selectedMovieId === firebase.auth().currentUser.uid) {
+  if (movies.setMovies().indexOf(selectedMovieId) !== -1) {
     alert('You have already added this movie to your watchlist silly!');
   } else {
     const user = firebase.auth().currentUser.uid;
@@ -31,6 +32,7 @@ const addWatchlistMovie = (e) => {
       })
       .catch(err => console.error(err, 'no new movie for you'));
   }
+  movies.movieBuilder();
 };
 
 const createWatchlistEventListener = () => {
