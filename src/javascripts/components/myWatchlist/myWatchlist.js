@@ -14,7 +14,7 @@ const watchlistMovieBuilder = (arrayOfMovies) => {
     domString += `<img src="${movie.imageURL}" height="300px">`;
     domString += '<div>';
     domString += '<button class="btn btn-danger w-100 removeWatch" style="border-radius: 0px;">Remove from Watchlist</button>';
-    domString += '<button class="btn btn-secondary w-100 rateButton" style="border-radius: 0px;">Rate this Movie</button>';
+    domString += '<button class="btn btn-secondary w-100 rateButton" style="border-radius: 0px;" data-toggle="modal" data-target="#ratingModal">Rate this Movie</button>';
     domString += '</div>';
     domString += '</div>';
     util.printToDom('movies', domString);
