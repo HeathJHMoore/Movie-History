@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import axios from 'axios';
 
 import $ from 'jquery';
@@ -8,6 +11,7 @@ import movies from './movies';
 const firebaseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const changeMovieRating = (userMovieId, newRating) => axios.patch(`${firebaseUrl}/userMovie/${userMovieId}.json`, { rating: newRating });
+const changeMovieWatched = userMovieId => axios.patch(`${firebaseUrl}/userMovie/${userMovieId}.json`, { isWatched: 'true' });
 
 let movieBeingRated = '';
 
@@ -28,11 +32,19 @@ const rateButtonUpdate = () => {
   if (movies.setMovies().indexOf(currentMovie) !== -1) {
     const rating = document.getElementById('movieRating').value;
     changeMovieRating(currentMovie, rating);
+    changeMovieWatched(currentMovie);
+  } else {
+    const newUserMovie = {
+      isWatched: 'true',
+      movieId: movieBeingRatedSetter(),
+      rating: document.getElementById('movieRating').value,
+      uid: firebase.auth().currentUser.uid,
+    };
+    axios.post(`${firebaseUrl}/userMovie.json`, newUserMovie);
   }
 };
 
 const rateButtonEvent = () => {
-  // $('#confirmRatingButton').on('click', rateButtonUpdate);
   $('body').on('click', '#confirmRatingButton', rateButtonUpdate);
 };
 
