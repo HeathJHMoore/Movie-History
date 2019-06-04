@@ -7,6 +7,7 @@ import movies from './components/Movies/movies';
 import addMovie from './components/Movies/createNewMovie';
 import watchlist from './components/myWatchlist/myWatchlist';
 import createWatchList from './components/myWatchlist/addToWatchlist';
+import rateMovie from './components/Movies/rateMovie';
 
 import 'bootstrap';
 import '../styles/main.scss';
@@ -23,6 +24,8 @@ const init = () => {
   movies.allMoviesEvent();
   createWatchList.createWatchlistEventListener();
   watchlist.removeWatchMovieEvent();
+  rateMovie.rateButtonEvent();
+  rateMovie.rateMovieEvent();
 };
 
 init();

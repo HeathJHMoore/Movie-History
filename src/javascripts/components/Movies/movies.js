@@ -47,7 +47,7 @@ const movieBuilder = () => {
         domString += `<img src="${movie.imageURL}" height="300px">`;
         domString += '<div>';
         domString += '<button class="btn btn-primary w-100 watchlistButton" style="border-radius: 0px;">Add to Watchlist</button>';
-        domString += '<button class="btn btn-secondary w-100" style="border-radius: 0px;">Rate this Movie</button>';
+        domString += '<button class="btn btn-secondary w-100 rateButton" style="border-radius: 0px;" data-toggle="modal" data-target="#ratingModal">Rate this Movie</button>';
         domString += '</div>';
         domString += '</div>';
         util.printToDom('movies', domString);
