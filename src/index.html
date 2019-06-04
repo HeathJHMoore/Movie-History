@@ -22,6 +22,12 @@
             <a id="navbar-button-movies" class="nav-link hide">Movies</a>
           </li>
           <li class="nav-item">
+            <a id="navbar-button-watchlist" class="nav-link hide">My Watchlist</a>
+          </li>
+          <li class="nav-item">
+            <a id="navbar-button-addMovies" class="nav-link hide" data-toggle="modal" data-target="#exampleModal">Add a Movie</a>
+          </li>
+          <li class="nav-item">
             <a id="navbar-button-logout" class="nav-link hide">Logout</a>
           </li>
         </ul>
@@ -29,8 +35,72 @@
     </nav>
   </div>
   <div id="auth"></div>
-  <div id="movies" class="hide container d-flex justify-content-between mt-2">
-    
+  <div id="movies" class="hide container col-12 d-flex justify-content-around flex-wrap mt-2"></div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Add a new movie!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class='form-group text-center'>
+            <label for="newMovieTitle">Movie Title</label>
+            <input class="form-control" id="newMovieTitle" type="text">
+          </div>
+          <div class="form-group text-center">
+              <label for="exampleFormControlSelect1">MPAA Rating</label>
+              <select id="newMovieMPAARating" class="form-control" id="exampleFormControlSelect1">
+                <option>G</option>
+                <option>PG</option>
+                <option>PG-13</option>
+                <option>R</option>
+              </select>
+          </div>
+          <div class='form-group text-center'>
+              <label for="newMovieImageURL">Image URL</label>
+              <input class="form-control" id="newMovieImageURL" type="text">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="addMovieButton" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel">What Would You Like to Rate This Movie?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group text-center">
+            <label for="exampleFormControlSelect1">Movie Rating</label>
+            <select id="movieRating" class="form-control" id="exampleFormControlSelect1">
+              <option>0 Stars</option>
+              <option>1 Stars</option>
+              <option>2 Stars</option>
+              <option>3 Stars</option>
+              <option>4 Stars</option>
+              <option>5 Stars</option>
+            </select>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="confirmRatingButton" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
